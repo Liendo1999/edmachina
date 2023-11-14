@@ -1,5 +1,11 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import {useStudents} from './composables/useStudents.js'
+
+const students = useStudents.getStudents()
+
+defineProps({
+  msg: String
+})
 </script>
 
 <template>
@@ -11,7 +17,12 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <div v-for="student in students">
+    {{ student.getMaterias}}
+  </div>
+  <div>
+    {{msg}}
+  </div>
 </template>
 
 <style scoped>

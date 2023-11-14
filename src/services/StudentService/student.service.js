@@ -1,7 +1,12 @@
+import stuentsMock from './students-mock.json'
+
 export const StudentService = {
-    getStudents: async () => {
-        const response = await fetch('http://localhost:3000/students');
-        const students = await response.json();
-        return students;
+
+    getStudents:  () => {
+        return  stuentsMock.students
+    },
+    // function to be used from useStudent to get a student by id
+    getStudentById: (id) => {
+        return stuentsMock.students.find(student => student.id === id)
     }
 }
