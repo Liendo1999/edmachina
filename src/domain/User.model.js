@@ -1,5 +1,5 @@
 export class UserModel {
-  private id
+
   constructor (id, name, email) {
     this.id = id
     this.name = name
@@ -11,7 +11,7 @@ export class UserModel {
 }
 
 export class StudentModel extends UserModel {
-  private materias = []
+  materias = ['Algebra', 'Calculo', 'Fisica', 'Quimica']
   constructor (id, name, email) {
     super(id, name, email)
   }
@@ -25,11 +25,11 @@ export class StudentModel extends UserModel {
 }
 
 export class AdminModel extends UserModel {
-  private estudiantes:StudentModel = []
+  estudiantes = []
   constructor (id, name, email) {
     super(id, name, email)
   }
-  set setEstudiantes (estudiantes:StudentModel[]) {
+  set setEstudiantes (estudiantes) {
     this.estudiantes = estudiantes
   }
   get getEstudiantes () {
