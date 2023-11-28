@@ -1,7 +1,7 @@
-import {StudentService} from "../services/StudentService/student.service.js"
-import {AdminModel, StudentModel} from "../domain/User.model.js";
+import StudentService from "../services/StudentService/student.service.js"
+import { StudentModel } from "../domain/User.model.js"
 
-export const useStudents =  {
+export const useStudents = {
     /**
      *
      * @return StudentModel[]
@@ -15,8 +15,7 @@ export const useStudents =  {
                 console.log(response)
                 return students
             }
-        }
-        catch (error) {
+        } catch (error) {
             console.log(error)
         }
     },
@@ -31,9 +30,8 @@ export const useStudents =  {
                 console.log(response)
                 return student
             }
-        }
-        catch (error) {
+        } catch (error) {
             console.log(error)
         }
-    },
+    }
 }
