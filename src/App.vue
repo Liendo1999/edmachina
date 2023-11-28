@@ -1,17 +1,17 @@
 <script setup>
-import Header from "./components/Header/Header.vue";
+import HeaderMachina from "./components/Header/HeaderMachina.vue"
 
-import { useStudents } from './composables/useStudents.js'
+import { useStudents } from "./composables/useStudents.js"
 
 const students = useStudents.getStudents()
 
 defineProps({
-    msg: String,
+    msg: String
 })
 </script>
 
 <template>
-    <Header/>
+    <header-machina />
     <div>
         <a href="https://vitejs.dev" target="_blank">
             <img src="/vite.svg" class="logo" alt="Vite logo" />
@@ -20,7 +20,7 @@ defineProps({
             <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
         </a>
     </div>
-    <div v-for="student in students">
+    <div v-for="(student,index) in students" :key="index">
         {{ student.getMaterias }}
     </div>
     <div>
@@ -35,9 +35,11 @@ defineProps({
     will-change: filter;
     transition: filter 300ms;
 }
+
 .logo:hover {
     filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.vue:hover {
     filter: drop-shadow(0 0 2em #42b883aa);
 }
