@@ -5,9 +5,6 @@ import { useStudents } from "./composables/useStudents.js"
 
 const students = useStudents.getStudents()
 
-defineProps({
-    msg: String
-})
 </script>
 
 <template>
@@ -22,9 +19,6 @@ defineProps({
     </div>
     <div v-for="(student,index) in students" :key="index">
         {{ student.getMaterias }}
-    </div>
-    <div>
-        {{ msg }}
     </div>
 </template>
 
