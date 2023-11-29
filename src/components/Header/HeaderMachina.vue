@@ -37,19 +37,15 @@ import IconContainer from "../IconContainer.vue"</script>
 
 <style scoped lang="scss">
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: blueviolet;
+    background-color: #645be8;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem;
     color: white;
     width: 100%;
     font-weight: 600;
     font-family: sans-serif;
-    height: 4rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 
     .right-side {
