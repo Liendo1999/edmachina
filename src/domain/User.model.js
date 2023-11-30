@@ -4,16 +4,18 @@ export class UserModel {
         this.name = name
         this.email = email
     }
+
     get getId() {
         return this.id
     }
 }
 
 export class StudentModel extends UserModel {
-    materias = ['Algebra', 'Calculo', 'Fisica', 'Quimica']
     constructor(id, name, email) {
         super(id, name, email)
+        this.materias = ["Algebra", "Calculo", "Fisica", "Quimica"]
     }
+
     set setMaterias(materias) {
         this.materias = materias
     }
@@ -24,9 +26,10 @@ export class StudentModel extends UserModel {
 }
 
 export class AdminModel extends UserModel {
-    estudiantes = []
+
     constructor(id, name, email) {
         super(id, name, email)
+        this.estudiantes = []
     }
 
     /**
@@ -36,6 +39,7 @@ export class AdminModel extends UserModel {
     set setEstudiantes(estudiantes) {
         this.estudiantes = estudiantes
     }
+
     get getEstudiantes() {
         return this.estudiantes
     }
