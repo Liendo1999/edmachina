@@ -9,6 +9,7 @@ import vue from "../assets/vue.svg"
 import darkMode from "../assets/icons/dark-mode.svg"
 import world from "../assets/icons/world.svg"
 import notification from "../assets/icons/notifications.svg"
+import machina from "../assets/icons/machina-log.svg"
 import { onMounted, ref } from "vue"
 
 const props = defineProps({
@@ -22,7 +23,8 @@ let icons = {
     vue,
     darkMode,
     world,
-    notification
+    notification,
+    machina
 }
 
 let selectedIcon = ref("")
@@ -40,7 +42,10 @@ function getSVG() {
 
 <style scoped>
 .icon {
+    display: grid;
+    place-items: center;
     width: 35px;
     height: 35px;
+    color: #FFFFFF;
 }
 </style>

@@ -4,7 +4,7 @@ import IconContainer from "../IconContainer.vue"</script>
 <template>
     <header>
         <div class="tag">
-            EdMachina
+            <IconContainer icon-name="machina" />
         </div>
         <div class="right-side">
             <div>
@@ -36,10 +36,20 @@ import IconContainer from "../IconContainer.vue"</script>
 </template>
 
 <style scoped lang="scss">
+button, input[type="submit"], input[type="reset"] {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
 header {
-    background-color: #645be8;
+    background-color: #4436FD;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
     color: white;
@@ -47,6 +57,11 @@ header {
     font-weight: 600;
     font-family: sans-serif;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+
+    .tag {
+        width: 2rem;
+        height: 2rem;
+    }
 
     .right-side {
         display: flex;
